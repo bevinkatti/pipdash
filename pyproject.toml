@@ -1,5 +1,5 @@
-git init[build-system]
-requires = ["setuptools>=42", "wheel"]
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -12,14 +12,24 @@ authors = [
     { name = "Abhishek Bevinkatti" }
 ]
 requires-python = ">=3.8"
+
 dependencies = [
     "httpx>=0.24.0",
     "rich>=13.0.0",
 ]
+
 keywords = [
-    "pypi", "pip", "stats", "downloads", "metrics",
-    "cli", "terminal", "packages", "developer-tools",
+    "pypi",
+    "pip",
+    "stats",
+    "downloads",
+    "metrics",
+    "cli",
+    "terminal",
+    "packages",
+    "developer-tools",
 ]
+
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
@@ -39,7 +49,7 @@ classifiers = [
 pipdash = "pipdash.cli:main"
 
 [project.urls]
-Homepage   = "https://github.com/bevinkatti/pipdash"
+Homepage = "https://github.com/bevinkatti/pipdash"
 Repository = "https://github.com/bevinkatti/pipdash"
 "Bug Tracker" = "https://github.com/bevinkatti/pipdash/issues"
 
