@@ -1,13 +1,21 @@
 <p align="center">
   <h1 align="center">📦 pipdash</h1>
   <p align="center">PyPI package download stats and metadata — right in your terminal.</p>
-  <p align="center">
-    <a href="https://pypi.org/project/pipdash"><img src="https://img.shields.io/pypi/v/pipdash?color=cyan&label=pipdash" alt="PyPI"></a>
-    <a href="https://pypi.org/project/pipdash"><img src="https://img.shields.io/pypi/pyversions/pipdash" alt="Python versions"></a>
-    <a href="https://github.com/bevinkatti/pipdash/blob/main/LICENSE"><img src="https://img.shields.io/github/license/bevinkatti/pipdash" alt="License"></a>
-  </p>
-</p>
 
+<p align="center">
+  <a href="https://pypi.org/project/pipdash/">
+    <img src="https://img.shields.io/pypi/v/pipdash?style=for-the-badge" alt="PyPI Version">
+  </a>
+<a href="https://github.com/bevinkatti/pipdash">
+  <img src="https://img.shields.io/github/stars/bevinkatti/pipdash?style=for-the-badge&logo=github" alt="GitHub Stars">
+</a>
+  <a href="https://pypi.org/project/pipdash/">
+    <img src="https://img.shields.io/pypi/pyversions/pipdash?style=for-the-badge" alt="Python Versions">
+  </a>
+  <a href="https://github.com/bevinkatti/pipdash/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/bevinkatti/pipdash?style=for-the-badge" alt="License">
+  </a>
+</p>
 ---
 
 No browser. No login. No config. One command.
