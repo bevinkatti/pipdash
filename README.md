@@ -74,9 +74,12 @@ Full download statistics + metadata. Pepy is used where its public badge API exp
 pipdash stats numpy
 pipdash stats django --json      # JSON output for scripting
 pipdash stats rag-harness --zerotraffic
-```
-
+```  
+---
 ### `--zerotraffic`
+```bash
+pipdash stats <package-name> --zerotraffic
+```
 Use one consistent PyPI Stats view for every download period. It excludes known mirror downloads and never inserts estimates. Periods unavailable because the package is too new are omitted.
 
 ### `pipdash info <package>`
