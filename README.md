@@ -16,6 +16,7 @@
     <img src="https://img.shields.io/github/license/bevinkatti/pipdash?style=for-the-badge" alt="License">
   </a>
 </p>
+
 ---
 
 No browser. No login. No config. One command.
