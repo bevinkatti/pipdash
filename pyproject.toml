@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pipdash"
+version = "1.1.0"
+description = "PyPI package download stats and metadata — right in your terminal."
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Abhishek Bevinkatti" }
+]
+requires-python = ">=3.8"
+dependencies = [
+    "httpx>=0.24.0",
+    "rich>=13.0.0",
+]
+keywords = [
+    "pypi", "pip", "stats", "downloads", "metrics",
+    "cli", "terminal", "packages", "developer-tools",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+pipdash = "pipdash.cli:main"
+
+[project.urls]
+Homepage   = "https://github.com/bevinkatti/pipdash"
+Repository = "https://github.com/bevinkatti/pipdash"
+"Bug Tracker" = "https://github.com/bevinkatti/pipdash/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pipdash*"]
