@@ -1,2 +1,0 @@
-[console_scripts]
-pipdash = pipdash.cli:main
