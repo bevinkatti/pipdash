@@ -22,39 +22,36 @@
 No browser. No login. No config. One command.
 
 ```bash
-pipdash stats requests
+pipdash stats package-name
 ```
+---
+### For example: 
+```bash
+pipdash stats rich
 ```
-📦 requests  v2.34.2
-   Python HTTP for Humans.
+->> 
+```
+Fetching stats for 'rich'...
+
+📦 rich  v15.0.0
+   Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal
 ──────────────────────────────────────────────────
-  Last 24 hours      9.80k
-  Last 7 days        65.00k
-  Last 30 days       271.00k
-  Last 90 days       813.00k
-  Last 180 days      1.63M
+  Last 24 hours        14.90M
+  Last 7 days          122.32M
+  Last 30 days         614.61M
+  Last 90 days         1.84B
+  Last 180 days        3.31B
 ──────────────────────────────────────────────────
-  ⬇  All-time Downloads   5.20M
+  ⬇  All-time Downloads   8.20G
 ──────────────────────────────────────────────────
 
-  Python Versions
-    3.12     ████████░░░░  41%
-    3.11     ████████░░░░  28%
-    3.10     ██████░░░░░░  18%
-    3.9      ████░░░░░░░░   8%
-
-  Platforms
-    Linux    ████████░░░░  62%
-    Windows  ██████░░░░░░  22%
-    macOS    ████░░░░░░░░  14%
-
-──────────────────────────────────────────────────
-  License          MIT
-  Requires Python  >=3.10
-  Total Versions   163
-  First Released   2011-02-14
-  Latest Release   v2.34.2  (2026-05-14)
-  Repository       https://github.com/<owner>/<repo>
+  Author          Will McGugan
+  License         MIT
+  Requires Python >=3.9.0
+  Total Versions  207
+  First Released  2019-11-10
+  Latest Release  v15.0.0  (2026-04-12)
+  Repository      https://github.com/Textualize/rich
 ```
 
 ---

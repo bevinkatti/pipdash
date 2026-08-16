@@ -76,8 +76,6 @@ def show_stats(d: dict) -> None:
             c.print(f"    [cyan]{os_name:<8}[/cyan] {bar} {pct}%")
 
     # ── Metadata ──────────────────────────────────────────────────────────────
-    c.print()
-    c.print("─" * 50, style=DIM)
     if d.get("author") and d["author"] != "N/A":
         c.print(f"  [bold]Author[/bold]          {d['author']}")
     c.print(f"  [bold]License[/bold]         {d['license']}")

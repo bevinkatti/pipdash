@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.3] - 2026-08-15
+
+### Fixed
+- Removed unnecessary blank spacing between all-time download statistics and package metadata.
+
 ## [1.0.1] - 2026-08-15
 
 ### Changed
