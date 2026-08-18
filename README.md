@@ -7,7 +7,7 @@
     <img src="https://img.shields.io/pypi/v/pipdash?style=for-the-badge" alt="PyPI Version">
   </a>
 <a href="https://github.com/bevinkatti/pipdash">
-  <img src="https://img.shields.io/github/stars/bevinkatti/pipdash?style=for-the-badge&logo=github" alt="GitHub Stars">
+  <img src="https://img.shields.io/github/stars/bevinkatti/pipdash?style=for-the-badge&logo=github&color=white" alt="GitHub Stars">
 </a>
   <a href="https://pypi.org/project/pipdash/">
     <img src="https://img.shields.io/pypi/pyversions/pipdash?style=for-the-badge" alt="Python Versions">
