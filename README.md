@@ -15,6 +15,9 @@
   <a href="https://github.com/bevinkatti/pipdash/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/bevinkatti/pipdash?style=for-the-badge" alt="License">
   </a>
+  <a href="https://pepy.tech/projects/pipdash">
+  <img src="https://img.shields.io/pepy/dt/pipdash?style=for-the-badge&color=orange" alt="PyPI Downloads">
+</a>
 </p>
 
 ---
