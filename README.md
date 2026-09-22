@@ -9,9 +9,9 @@
 <a href="https://github.com/bevinkatti/pipdash">
   <img src="https://img.shields.io/github/stars/bevinkatti/pipdash?style=for-the-badge&logo=github&color=white" alt="GitHub Stars">
 </a>
-  <a href="https://pypi.org/project/pipdash/">
-    <img src="https://img.shields.io/pypi/pyversions/pipdash?style=for-the-badge" alt="Python Versions">
-  </a>
+<a href="https://pypi.org/project/pipdash/">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.8+">
+</a>
   <a href="https://github.com/bevinkatti/pipdash/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/bevinkatti/pipdash?style=for-the-badge" alt="License">
   </a>
