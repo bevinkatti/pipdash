@@ -80,6 +80,7 @@ def show_home_preview() -> None:
 [bold bright_cyan]ℹ Package[/bold bright_cyan]
     [dim]License[/dim]             [bold]MIT[/bold]
     [dim]Python[/dim]              [bold]>=3.9[/bold]
+    
     """
 
     panel_width = min(72, console.width - 4)

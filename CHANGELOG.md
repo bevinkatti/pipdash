@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.4] - 2026-10-04
+
+### Added
+- Added a branded, colorful terminal homepage for `pipdash`.
+- Added quick-start commands and an example stats output preview.
+- Added a responsive Rich panel for the terminal output preview.
+
+### Changed
+- `pipdash` without arguments now shows a concise terminal homepage.
+- `pipdash --help` remains the full command and option reference.
+
 ## [1.1.3] - 2026-08-15
 
 ### Fixed

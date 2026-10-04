@@ -1,5 +1,5 @@
 """pipdash — PyPI package stats from the command line."""
 
-__version__ = "1.1.3"
+__version__ = "1.1.4"
 __author__  = "Abhishek Bevinkatti"
 __license__ = "MIT"

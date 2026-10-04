@@ -1,6 +1,8 @@
-<p align="center">
-  <h1 align="center">📦 pipdash</h1>
-  <p align="center">PyPI package download stats and metadata — right in your terminal.</p>
+ ![📦pipdash](public/pipdash-ss.png)
+# 📦pipdash
+PyPI package download stats and metadata — right in your terminal.  
+
+
 
 <p align="center">
   <a href="https://pypi.org/project/pipdash/">
