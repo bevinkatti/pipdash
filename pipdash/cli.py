@@ -63,9 +63,45 @@ HOME = f"""
 
 [orange]    Run [bold]pipdash --help[/bold] for all commands and options.[/orange]
 """
+HOME_COMPACT = f"""
+[bold bright_cyan]  PIPDASH[/bold bright_cyan]
+[bold dim]    v{__version__}[/bold dim]
+
+[bold white]  PyPI package downloads, stats & metadata[/bold white]
+[bold white]  — at your fingertips.[/bold white]
+
+[dim]  ────────────────────────────────[/dim]
+[bold bright_cyan]  QUICK START[/bold bright_cyan]
+
+[green]  $ pipdash stats <package>[/green]
+[green]  $ pipdash info <package>[/green]
+[green]  $ pipdash compare <pkg1> <pkg2>[/green]
+
+[dim]  ────────────────────────────────[/dim]
+[white]  Run [bold]pipdash --help[/bold] for all commands.[/white]
+"""
+
 # home Preview
 def show_home_preview() -> None:
-    preview = """[bold]$ pipdash stats rich[/bold]
+    width = console.width
+
+    if width < 60:
+        preview = """[bold]$ pipdash stats rich[/bold]
+
+[bold bright_cyan]📦 rich[/bold bright_cyan]
+    [dim]v15.0.0[/dim]
+
+[bold bright_cyan]📊 Downloads[/bold bright_cyan]
+    [dim]24h[/dim]     [bold]14.90M[/bold]
+    [dim]7d[/dim]     [bold]122.32M[/bold]
+    [dim]30d[/dim]    [bold]614.61M[/bold]
+
+[bold]⬇ Total[/bold]    [bold]8.20G[/bold]"""
+
+        panel_width = max(30, width - 2)
+
+    else:
+        preview = """[bold]$ pipdash stats rich[/bold]
 
 [bold bright_cyan]📦 rich[/bold bright_cyan]
     [dim]v15.0.0[/dim]
@@ -79,11 +115,9 @@ def show_home_preview() -> None:
 
 [bold bright_cyan]ℹ Package[/bold bright_cyan]
     [dim]License[/dim]             [bold]MIT[/bold]
-    [dim]Python[/dim]              [bold]>=3.9[/bold]
-    
-    """
+    [dim]Python[/dim]              [bold]>=3.9[/bold]"""
 
-    panel_width = min(72, console.width - 4)
+        panel_width = min(72, width - 4)
 
     console.print(
         Panel(
@@ -198,7 +232,11 @@ def main() -> None:
     args = sys.argv[1:]
 
     if not args:
-        console.print(HOME)
+        if console.width >= 80:
+            console.print(HOME)
+        else:
+            console.print(HOME_COMPACT)
+
         show_home_preview()
         sys.exit(0)
 

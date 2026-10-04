@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.5] - 2026-10-04
+
+### Fixed
+- Made the terminal homepage responsive for narrow terminals and mobile-sized screens.
+- Added compact homepage and example output layouts to prevent ASCII and panel overflow.
+
 ## [1.1.4] - 2026-10-04
 
 ### Added
