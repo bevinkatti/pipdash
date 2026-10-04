@@ -7,6 +7,7 @@ import sys
 import json
 import httpx
 from rich.console import Console
+from rich.panel import Panel
 
 from pipdash import __version__
 from pipdash.api import get_stats, get_info
@@ -30,16 +31,68 @@ HELP = f"""
   --version Show version
 
 [bold]Examples:[/bold]
-  pipdash stats requests
+  pipdash stats rag-harness
   pipdash stats numpy --json
-  pipdash stats rag-harness -zerotraffic
+  pipdash stats rich -zerotraffic
   pipdash info django
   pipdash compare requests httpx aiohttp
 
 [bold]Data sources:[/bold]
   pypi.org · pypistats.org · pepy.tech
 """
+#==== Cli Home screen ======
 
+HOME = f"""
+[bold bright_cyan]  ██████╗ ██╗██████╗ ██████╗  █████╗ ███████╗██╗  ██╗[/bold bright_cyan]
+[bold cyan]  ██╔══██╗██║██╔══██╗██╔══██╗██╔══██╗██╔════╝██║  ██║[/bold cyan]
+[bold bright_cyan]  ██████╔╝██║██████╔╝██║  ██║███████║███████╗███████║[/bold bright_cyan]
+[bold cyan]  ██╔═══╝ ██║██╔═══╝ ██║  ██║██╔══██║╚════██║██╔══██║[/bold cyan]
+[bold bright_cyan]  ██║     ██║██║     ██████╔╝██║  ██║███████║██║  ██║[/bold bright_cyan]
+[bold cyan]  ╚═╝     ╚═╝╚═╝     ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝[/bold cyan]
+[bold dim]                        v{__version__}[/bold dim]
+
+[bold white] PyPI package downloads, stats & metadata — at your fingertips.[/bold white]
+
+[dim]  ──────────────────────────────────────────────────────[/dim]
+[bold bright_cyan]  QUICK START[/bold bright_cyan]
+
+[green]    $ pipdash stats <package>[/green]
+[green]    $ pipdash info <package>[/green]
+[green]    $ pipdash compare <package1> <package2> ...[/green]
+[dim]  ──────────────────────────────────────────────────────[/dim]
+
+[orange]    Run [bold]pipdash --help[/bold] for all commands and options.[/orange]
+"""
+# home Preview
+def show_home_preview() -> None:
+    preview = """[bold]$ pipdash stats rich[/bold]
+
+[bold bright_cyan]📦 rich[/bold bright_cyan]
+    [dim]v15.0.0[/dim]
+
+[bold bright_cyan]📊 Downloads[/bold bright_cyan]
+    [dim]Last 24 hours[/dim]       [bold]14.90M[/bold]
+    [dim]Last 7 days[/dim]         [bold]122.32M[/bold]
+    [dim]Last 30 days[/dim]        [bold]614.61M[/bold]
+
+    [bold]⬇ Total downloads[/bold]    [bold]8.20G[/bold]
+
+[bold bright_cyan]ℹ Package[/bold bright_cyan]
+    [dim]License[/dim]             [bold]MIT[/bold]
+    [dim]Python[/dim]              [bold]>=3.9[/bold]
+    """
+
+    panel_width = min(72, console.width - 4)
+
+    console.print(
+        Panel(
+            preview,
+            title="[bold bright_cyan]Example output[/bold bright_cyan]",
+            border_style="cyan",
+            padding=(0, 1),
+            width=panel_width,
+        )
+    )
 
 def _is_flag(arg: str) -> bool:
     return arg.startswith("--")
@@ -143,11 +196,16 @@ def cmd_compare(args: list[str]) -> None:
 def main() -> None:
     args = sys.argv[1:]
 
-    if not args or args[0] in ("--help", "-h"):
+    if not args:
+        console.print(HOME)
+        show_home_preview()
+        sys.exit(0)
+
+    if args[0] in ("--help", "-help", "-h"):
         console.print(HELP)
         sys.exit(0)
 
-    if args[0] in ("--version", "-V"):
+    if args[0] in ("--version", "-V", "-v"):
         console.print(f"pipdash v{__version__}")
         sys.exit(0)
 
